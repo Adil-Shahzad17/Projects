@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from "../Components/index"
 import { ReactTyped } from "react-typed"
-import GuestImage from "../Assets/GuestImage.jpg"
+import GuestImage from "../Assets/guestImage.jpg"
 import { Link } from 'react-router-dom'
 
 const Guest_Page = () => {

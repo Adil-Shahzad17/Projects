@@ -2,7 +2,7 @@ import React from 'react'
 import homebg from "../Assets/homebg.jpg"
 import about from "../Assets/about.jpg"
 import contactimage from "../Assets/contactimage.jpg"
-import GuestImage from "../Assets/GuestImage.jpg"
+import GuestImage from "../Assets/guestImage.jpg"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { saveAs } from "file-saver"
 import { CloudDownload } from 'lucide-react'
