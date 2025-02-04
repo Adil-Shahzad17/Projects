@@ -1,7 +1,7 @@
 import React from 'react'
 import { About } from '../Components/index'
 
-const About_page = () => {
+const AboutPage = () => {
     return (
         <>
             <About />
@@ -10,4 +10,4 @@ const About_page = () => {
     )
 }
 
-export default About_page
+export default AboutPage

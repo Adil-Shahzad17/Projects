@@ -1,11 +1,11 @@
 import React from 'react'
 import { Guest_Page } from '../Components/index'
 
-const Guest_Page_Page = () => {
+const Guest_PagePage = () => {
     return (
         <Guest_Page />
     )
 }
 
 
-export default Guest_Page_Page
+export default Guest_PagePage

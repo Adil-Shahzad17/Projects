@@ -2,7 +2,7 @@ import React from 'react'
 import { Sign_up } from '../Components/index'
 
 
-const Sign_up_page = () => {
+const Sign_upPage = () => {
     return (
         <div className='w-full h-full lg:h-[120%] bg-button-color flex justify-center items-center'>
             <Sign_up />
@@ -10,4 +10,4 @@ const Sign_up_page = () => {
     )
 }
 
-export default Sign_up_page
+export default Sign_upPage
