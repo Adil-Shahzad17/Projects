@@ -4,7 +4,7 @@ import { Input, Button } from "./index"
 import authservice from "../Appwrite/auth"
 import { login } from "../Store/PexelSlice"
 import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { Bars } from 'react-loading-icons'
 
 const Sign_up = () => {
@@ -92,6 +92,10 @@ const Sign_up = () => {
 
             <Button type="submit" text="Sign Up"
                 className='w-[95%] h-10 mt-4 px-3 mx-auto mb-4' />
+
+            <p className='mt-4 pb-4'>
+                Already have an account? <Link to='/sign_in' className='underline font-bold hover:cursor-pointer text-black px-3'>Sign In</Link>
+            </p>
 
 
             {

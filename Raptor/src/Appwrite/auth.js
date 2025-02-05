@@ -34,7 +34,7 @@ export class authService {
     try {
       return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
-      console.log("Login User Error", error);
+      throw error;
     }
   }
 
@@ -43,9 +43,12 @@ export class authService {
       const user = await this.account.get();
       return user;
     } catch (error) {
-      console.log("Get Current User Error");
+      if (error.code === 401) {
+        console.log(
+          "Unauthorized: Please ensure the user is logged in and has the necessary permissions."
+        );
+      }
     }
-    return null;
   }
 
   async logOut() {
@@ -56,6 +59,7 @@ export class authService {
       }
     } catch (error) {
       console.log("LogOut Error", error);
+      throw error;
     }
   }
 }

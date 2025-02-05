@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Header, Footer } from "./Components/index"
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import authservice from './Appwrite/auth'
 import { login, logout } from "./Store/PexelSlice"

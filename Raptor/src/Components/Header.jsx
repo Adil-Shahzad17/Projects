@@ -71,7 +71,7 @@ const Header = () => {
 
             </ul>
 
-            <div onClick={handleNav} className='text-black grid place-content-center px-4 sm:hidden'>
+            <div onClick={handleNav} className='text-black grid place-content-center px-4 hover:cursor-pointer sm:hidden'>
                 {!nav ?
                     <Menu size={26} /> : <X size={26} />
                 }
@@ -79,10 +79,34 @@ const Header = () => {
 
 
             <ul className={nav ? 'fixed left-0 top-[75px] w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'ease-in-out duration-1000 fixed left-[-100%] top-[75px]'}>
-                <li className='p-5 border-b border-b-gray-900 '>Home</li>
-                <li className='p-5 border-b border-b-gray-900 '>About</li>
-                <li className='p-5 border-b border-b-gray-900 '>Contact</li>
-                <LogoutBtn className='px-8 mt-5 ml-5' text="LogOut" />
+
+                {
+                    auth && <li className='p-5 border-b border-b-gray-900 '><Link to='/home'>Home</Link></li>
+
+                }
+
+                {
+                    auth && <li className='p-5 border-b border-b-gray-900 '><Link to='/about'>About</Link></li>
+                }
+
+                {
+
+                    auth && <li className='p-5 border-b border-b-gray-900 '><Link to='/contact'>Contact</Link></li>
+                }
+
+                {
+                    !auth && <li className='p-5 border-b border-b-gray-900 '> <Link to='/sign_in' className='bg-button-color px-4 py-2 rounded-2xl ' >Sign In</Link></li>
+                }
+
+                {
+                    !auth && <li className='p-5 border-b border-b-gray-900 '> <Link to='/sign_up' className='bg-button-color px-4 py-2 rounded-2xl ' >Sign Up</Link></li>
+                }
+
+                {
+                    auth && <LogoutBtn className='px-8 mt-5 ml-5 hover:bg-white hover:text-black' text="LogOut" />
+                }
+
+
             </ul>
 
         </nav>

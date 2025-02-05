@@ -81,7 +81,7 @@ const Sign_in = () => {
                 className='w-[95%] h-10 mt-4 px-3 mx-auto' />
 
             <p className='mt-4'>
-                Don't have an account <Link to='/sign_up' className='underline font-bold hover:cursor-pointer text-black px-3'>Sign Up</Link>
+                Don't have an account? <Link to='/sign_up' className='underline font-bold hover:cursor-pointer text-black px-3'>Sign Up</Link>
             </p>
 
             {
